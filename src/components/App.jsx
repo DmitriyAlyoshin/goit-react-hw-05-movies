@@ -7,18 +7,19 @@ import { PageNotFound } from '../Error/PageNotFound';
 
 const Cast = lazy(() => import('./Cast/Cast'));
 
-const Movies = lazy(() =>
-  import('../pages/Movies/Movies').then(module => ({
-    ...module,
-    default: module.Movies,
-  }))
-);
 const Reviews = lazy(() =>
   import('./Reviews/Reviews').then(module => ({
     ...module,
     default: module.Reviews,
   }))
 );
+const Movies = lazy(() =>
+  import('../pages/Movies/Movies').then(module => ({
+    ...module,
+    default: module.Movies,
+  }))
+);
+
 
 export const App = () => {
   return (
